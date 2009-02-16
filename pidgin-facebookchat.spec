@@ -10,7 +10,7 @@ Source3:        %{name}-Makefile
 Provides:       pidgin-facebookchat = %{version}-%{release}
 Obsoletes:      pidgin-facebookchat < 1.35-3
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:  libpurple-devel
+BuildRequires:  pidgin-devel
 #BuildRequires:  zlib-devel
 
 %description
