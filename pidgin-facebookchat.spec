@@ -1,16 +1,18 @@
 Name:           pidgin-facebookchat
-Version:        1.47
+Version:        1.54
 Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
 License:        GPLv3+
 URL:            http://code.google.com/p/pidgin-facebookchat/
-Source0: http://pidgin-facebookchat.googlecode.com/files/pidgin-facebookchat-source-%{version}.tar.bz2
+Source0:	http://pidgin-facebookchat.googlecode.com/files/pidgin-facebookchat-source-%{version}.tar.bz2
 Source3:        %{name}-Makefile
 Provides:       pidgin-facebookchat = %{version}-%{release}
 Obsoletes:      pidgin-facebookchat < 1.35-3
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  pidgin-devel
+BuildRequires:	libclutter0.9-devel
+BuildRequires:	libjson-glib-devel
 #BuildRequires:  zlib-devel
 
 %description
@@ -24,7 +26,7 @@ notifications, search for Facebook friends and set your Facebook
 status.
 
 %prep
-%setup -q -n pidgin-facebookchat
+%setup -q -n %{name}
 # Upstream Makefile is totally horrible, use our own instead.
 mv Makefile Makefile.orig
 install -p %{SOURCE3} Makefile
