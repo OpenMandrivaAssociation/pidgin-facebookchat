@@ -11,7 +11,7 @@ Provides:       pidgin-facebookchat = %{version}-%{release}
 Obsoletes:      pidgin-facebookchat < 1.35-3
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  pidgin-devel
-BuildRequires:	libclutter0.9-devel
+BuildRequires:	pkgconfig(clutter-0.9)
 BuildRequires:	libjson-glib-devel
 #BuildRequires:  zlib-devel
 
