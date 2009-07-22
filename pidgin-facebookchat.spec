@@ -1,5 +1,5 @@
 Name:           pidgin-facebookchat
-Version:        1.54
+Version:        1.60
 Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
