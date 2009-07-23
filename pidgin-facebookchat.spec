@@ -1,6 +1,6 @@
 Name:           pidgin-facebookchat
 Version:        1.60
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
 License:        GPLv3+
@@ -37,15 +37,14 @@ export CFLAGS="$RPM_OPT_FLAGS"
 make LIBDIR=%{_libdir}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT LIBDIR=%{_libdir}
-chmod 0755 $RPM_BUILD_ROOT%{_libdir}/purple-2/libfacebook.so
+rm -rf %{buildroot}
+make install DESTDIR=%{buildroot} LIBDIR=%{_libdir}
+chmod 0755 %{buildroot}%{_libdir}/purple-2/libfacebook.so
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING
 %{_libdir}/purple-2/*.so
 %{_datadir}/pixmaps/pidgin/protocols/*/facebook.png
