@@ -1,6 +1,6 @@
 Name:           pidgin-facebookchat
-Version:        1.60
-Release:        %mkrel 2
+Version:        1.61
+Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
 License:        GPLv3+
@@ -11,7 +11,6 @@ Provides:       pidgin-facebookchat = %{version}-%{release}
 Obsoletes:      pidgin-facebookchat < 1.35-3
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  pidgin-devel
-BuildRequires:	pkgconfig(clutter-0.9)
 BuildRequires:	libjson-glib-devel
 #BuildRequires:  zlib-devel
 
