@@ -1,5 +1,5 @@
 Name:           pidgin-facebookchat
-Version:        1.65
+Version:        1.67
 Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
@@ -12,7 +12,7 @@ Obsoletes:      pidgin-facebookchat < 1.35-3
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  pidgin-devel
 BuildRequires:	libjson-glib-devel
-#BuildRequires:  zlib-devel
+BuildRequires:  zlib-devel
 
 %description
 This is a Facebook chat plugin for Pidgin and libpurple
@@ -31,9 +31,9 @@ mv Makefile Makefile.orig
 install -p %{SOURCE3} Makefile
 
 %build
+%setup_compile_flags
 
-export CFLAGS="$RPM_OPT_FLAGS"
-make LIBDIR=%{_libdir}
+%make LIBDIR=%{_libdir}
 
 %install
 rm -rf %{buildroot}
