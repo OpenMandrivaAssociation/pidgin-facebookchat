@@ -4,7 +4,7 @@ Release:        2
 Summary:        Libpurple plug-in supporting facebook IM
 Group:          Networking/Instant messaging
 License:        GPLv3+
-URL:            http://code.google.com/p/pidgin-facebookchat/
+URL:            https://code.google.com/p/pidgin-facebookchat/
 Source0:	http://pidgin-facebookchat.googlecode.com/files/pidgin-facebookchat-source-%{version}.tar.bz2
 Source3:        %{name}-Makefile
 Provides:       pidgin-facebookchat = %{version}-%{release}
